@@ -1,21 +1,13 @@
-button {
-  background: var(--pink);
-  border: none;
-  padding: 10px 16px;
-  border-radius: 12px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.2s;
+:root {
+  --pink-light: #ffd6e8;
+  --pink: #ff9acb;
+  --pink-dark: #d9488e;
+  --text-dark: #4a2c3a;
+  --bg-light: #fff7fb;
 }
 
-button:hover {
-  background: var(--pink-dark);
-}
-
-input {
-  padding: 10px;
-  border: 2px solid var(--pink);
-  border-radius: 10px;
-  background: white;
+body {
+  background: var(--bg-light);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
 }
