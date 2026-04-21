@@ -4,12 +4,16 @@ import CatHabitList from './components/CatHabitList.vue'
 import CatStats from './components/CatStats.vue'
 import { useCatHabitStore } from './stores/catHabitStore'
 
+// ⭐ Correct Vite image import for the logo
+import logo from './assets/logo.png'
+
 const store = useCatHabitStore()
 </script>
 
 <template>
   <header class="app-header">
-    <img src="/assets/logo.png" class="logo" />
+    <!-- ⭐ Use imported logo instead of /src/... -->
+    <img :src="logo" class="logo" />
     <h1>Iris & Friends Habit Tracker</h1>
   </header>
 
