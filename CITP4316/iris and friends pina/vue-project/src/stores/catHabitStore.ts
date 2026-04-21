@@ -1,8 +1,14 @@
 import { defineStore } from 'pinia'
 
+interface Habit {
+  id: number
+  name: string
+  completed: boolean
+}
+
 export const useCatHabitStore = defineStore('catHabitStore', {
   state: () => ({
-    habits: []
+    habits: [] as Habit[]
   }),
 
   getters: {
