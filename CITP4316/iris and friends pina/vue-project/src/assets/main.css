@@ -7,7 +7,46 @@
 }
 
 body {
-  background: var(--bg-light);
+  background: linear-gradient(180deg, #ffe6f2, #fff7fb);
   font-family: "Poppins", sans-serif;
   color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: var(--pink);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--pink-dark);
+}
+
+input {
+  padding: 10px;
+  border: 2px solid var(--pink);
+  border-radius: 10px;
+  background: white;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  color: var(--pink-dark);
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.paw-divider {
+  text-align: center;
+  margin: 15px 0;
+  opacity: 0.6;
 }

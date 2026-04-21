@@ -1,24 +1,18 @@
 import { defineStore } from 'pinia'
 
-interface Habit {
-  id: number
-  name: string
-  completed: boolean
-}
-
-export const useCatHabitStore = defineStore('catHabitStore', {
+export const useCatHabitStore = defineStore('catHabits', {
   state: () => ({
-    habits: [] as Habit[]
+    habits: [] as { id: number; name: string; done: boolean }[]
   }),
 
   getters: {
     totalHabits: (state) => state.habits.length,
-    completedHabits: (state) => state.habits.filter(h => h.completed).length,
+    completedHabits: (state) => state.habits.filter(h => h.done).length,
     catMood: (state) => {
-      const done = state.habits.filter(h => h.completed).length
+      const done = state.habits.filter(h => h.done).length
       if (done === 0) return "😾 Grumpy"
       if (done < state.habits.length) return "😺 Content"
-      return "😻 Very Happy"
+      return "😻 Happy"
     }
   },
 
@@ -27,13 +21,17 @@ export const useCatHabitStore = defineStore('catHabitStore', {
       this.habits.push({
         id: Date.now(),
         name,
-        completed: false
+        done: false
       })
     },
 
     toggleHabit(id: number) {
       const habit = this.habits.find(h => h.id === id)
-      if (habit) habit.completed = !habit.completed
+      if (habit) habit.done = !habit.done
+    },
+
+    resetHabits() {
+      this.habits = []
     }
   }
 })
