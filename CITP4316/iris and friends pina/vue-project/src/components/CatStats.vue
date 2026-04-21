@@ -30,9 +30,9 @@ const progressPercent = computed(() => {
 })
 
 const catImage = computed(() => {
-  if (store.catMood === "😾 Grumpy") return "/src/assets/cat-grumpy.png"
-  if (store.catMood === "😺 Content") return "/src/assets/cat-content.png"
-  return "/src/assets/cat-happy.png"
+  if (store.catMood === "😾 Grumpy") return "/assets/cat-grumpy.png"
+  if (store.catMood === "😺 Content") return "/assets/cat-content.png"
+  return "/assets/cat-happy.png"
 })
 </script>
 
