@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { useCatHabitStore } from '@/stores/ccatHabitStore'
+import { useCatHabitStore } from '@/stores/catHabitStore'
 
 const store = useCatHabitStore()
 const habitName = ref('')
