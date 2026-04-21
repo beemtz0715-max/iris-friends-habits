@@ -1,6 +1,12 @@
+<script setup>
+import AddCatHabit from './components/AddCatHabit.vue'
+import CatHabitList from './components/CatHabitList.vue'
+import CatStats from './components/CatStats.vue'
+</script>
+
 <template>
   <header class="app-header">
-    <img src="/src/assets/logo.png" alt="Iris & Friends Logo" class="logo" />
+    <img src="/src/assets/logo.png" class="logo" />
     <h1>Iris & Friends Habit Tracker</h1>
   </header>
 
@@ -22,8 +28,8 @@
   border-radius: 50%;
 }
 
-h1 {
-  color: var(--pink-dark);
-  margin-top: 10px;
+main {
+  max-width: 600px;
+  margin: auto;
 }
 </style>
