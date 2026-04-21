@@ -9,7 +9,7 @@ const store = useCatHabitStore()
 
 <template>
   <header class="app-header">
-    <img src="/src/assets/logo.png" class="logo" />
+    <img src="/assets/logo.png" class="logo" />
     <h1>Iris & Friends Habit Tracker</h1>
   </header>
 
