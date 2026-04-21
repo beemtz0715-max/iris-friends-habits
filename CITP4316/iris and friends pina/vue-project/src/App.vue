@@ -1,13 +1,29 @@
-<script setup>
-import AddCatHabit from './components/AddCatHabit.vue'
-import CatHabitList from './components/CatHabitList.vue'
-import CatStats from './components/CatStats.vue'
-</script>
-
 <template>
-  <h1>Iris & Friends Cat Care Tracker 🐾</h1>
+  <header class="app-header">
+    <img src="/src/assets/logo.png" alt="Iris & Friends Logo" class="logo" />
+    <h1>Iris & Friends Habit Tracker</h1>
+  </header>
 
-  <AddCatHabit />
-  <CatHabitList />
-  <CatStats />
+  <main>
+    <AddCatHabit />
+    <CatHabitList />
+    <CatStats />
+  </main>
 </template>
+
+<style>
+.app-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 120px;
+  border-radius: 50%;
+}
+
+h1 {
+  color: var(--pink-dark);
+  margin-top: 10px;
+}
+</style>
